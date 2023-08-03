@@ -44,12 +44,9 @@ export class NegociacaoController {
             return ;
         }
 
-        this.negociacoes.adiciona(negociacao);
-        
-        // console.log(negociacao.paraTexto());
-        // console.log(this.negociacoes.paraTexto());
-        const calopsita = 'miau'
-        imprimir(negociacao, this.negociacoes, calopsita);
+        this.negociacoes.adiciona(negociacao);    
+        // const calopsita = 'miau'
+        imprimir(negociacao, this.negociacoes);
         
         this.limparFormulario();
         this.atualizaView();
