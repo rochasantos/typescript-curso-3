@@ -1,5 +1,4 @@
 import { NegociacaoController } from './controllers/negociacao-controller.js';
-import { Negociacao } from './models/negociacao.js';
 
 const controller = new NegociacaoController();
 const form = document.querySelector('.form');
@@ -14,8 +13,9 @@ if (form) {
 
 const botaoImporta = document.querySelector('#botao-importa');
 if (botaoImporta) {
-    botaoImporta.addEventListener('click', () => {
-        
+    botaoImporta.addEventListener('click', (event) => {
+        event.preventDefault();
+        controller.importaDados();
     })
 } else {
     throw Error('Botão iport anão foi encontrado.')

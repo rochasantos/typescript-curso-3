@@ -12,7 +12,9 @@ else {
 }
 const botaoImporta = document.querySelector('#botao-importa');
 if (botaoImporta) {
-    botaoImporta.addEventListener('click', () => {
+    botaoImporta.addEventListener('click', (event) => {
+        event.preventDefault();
+        controller.importaDados();
     });
 }
 else {
