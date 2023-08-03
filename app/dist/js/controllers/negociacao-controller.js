@@ -35,7 +35,7 @@ export class NegociacaoController {
             .then(res => res.json())
             .then((dados) => {
             return dados.map(dadosDeHoje => {
-                return new Negociacao(new Date(), dadosDeHoje.vezes, dadosDeHoje.montante);
+                return new Negociacao(new Date(), dadosDeHoje.vezes, dadosDeHoje.valor);
             });
         })
             .then(negociacoesDeHoje => {
